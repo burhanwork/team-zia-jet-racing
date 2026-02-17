@@ -1,0 +1,432 @@
+/* ============================================
+   TEAM ZIA JET RACING — Custom Styles
+   ============================================ */
+
+/* ========== HERO ZOOM ANIMATION ========== */
+@keyframes heroZoom {
+  0% { transform: scale(1.1); }
+  100% { transform: scale(1.25); }
+}
+
+/* ========== CINEMATIC PARALLAX BREAK ========== */
+.cinematic-break {
+  position: relative;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+@supports (-webkit-overflow-scrolling: touch) {
+  .cinematic-break { background-attachment: scroll; }
+}
+
+/* ========== NOISE TEXTURE OVERLAY ========== */
+.noise-overlay {
+  position: relative;
+}
+.noise-overlay::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ========== GLASS MORPHISM ========== */
+.glass {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ========== GOLD GRADIENT TEXT ========== */
+.text-gradient-gold {
+  background: linear-gradient(135deg, #FFD700, #FFA500, #FFD700);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ========== RED-GOLD GRADIENT TEXT ========== */
+.text-gradient-zia {
+  background: linear-gradient(135deg, #CC0000, #FFD700);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ========== GLOW EFFECTS ========== */
+.glow-red { box-shadow: 0 0 30px rgba(204, 0, 0, 0.3); }
+.glow-gold { box-shadow: 0 0 30px rgba(255, 215, 0, 0.3); }
+.glow-red-lg { box-shadow: 0 0 60px rgba(204, 0, 0, 0.4); }
+.glow-gold-lg { box-shadow: 0 0 60px rgba(255, 215, 0, 0.4); }
+
+/* ========== BUTTON HOVER SWEEP ========== */
+.btn-sweep {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.btn-sweep::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  transition: left 0.4s ease;
+  z-index: -1;
+}
+.btn-sweep:hover::before {
+  left: 0;
+}
+.btn-red-to-gold::before { background: #FFD700; }
+.btn-gold-to-red::before { background: #CC0000; }
+
+/* ========== NAV LINK UNDERLINE ========== */
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: #FFD700;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+  left: 0;
+}
+
+/* ========== NAVBAR SCROLLED ========== */
+.navbar-scrolled {
+  background: rgba(10, 10, 10, 0.95) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 215, 0, 0.1);
+}
+
+/* ========== SCROLLBAR STYLING ========== */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #0A0A0A; }
+::-webkit-scrollbar-thumb { background: #2A2A2A; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #CC0000; }
+
+/* ========== HORIZONTAL SCROLL CONTAINER ========== */
+.horizontal-scroll {
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.horizontal-scroll::-webkit-scrollbar { display: none; }
+.horizontal-scroll > * {
+  scroll-snap-align: center;
+}
+
+/* ========== SPEED LINES (Hero Background) ========== */
+.speed-line {
+  position: absolute;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.3), transparent);
+  animation: speed-streak var(--duration, 3s) linear infinite;
+  animation-delay: var(--delay, 0s);
+}
+@keyframes speed-streak {
+  0% { transform: translateX(-100vw); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateX(200vw); opacity: 0; }
+}
+
+/* ========== MARQUEE ========== */
+.marquee-track {
+  display: flex;
+  animation: marquee-scroll 30s linear infinite;
+  will-change: transform;
+}
+.marquee-container:hover .marquee-track {
+  animation-play-state: paused;
+}
+@keyframes marquee-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.marquee-track-reverse {
+  animation-direction: reverse;
+}
+
+/* ========== FLOATING PARTICLES (Merch Page) ========== */
+.particle {
+  position: absolute;
+  width: var(--size, 4px);
+  height: var(--size, 4px);
+  background: #FFD700;
+  border-radius: 50%;
+  opacity: 0;
+  animation: float-up var(--duration, 8s) ease-in-out infinite;
+  animation-delay: var(--delay, 0s);
+}
+@keyframes float-up {
+  0% { transform: translateY(100vh) scale(0); opacity: 0; }
+  20% { opacity: var(--max-opacity, 0.6); }
+  80% { opacity: var(--max-opacity, 0.6); }
+  100% { transform: translateY(-20vh) scale(1); opacity: 0; }
+}
+
+/* ========== LOADING SCREEN ========== */
+.loading-screen {
+  position: fixed;
+  inset: 0;
+  background: #0A0A0A;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loading-ring {
+  width: 120px;
+  height: 120px;
+  border: 2px solid transparent;
+  border-top: 2px solid #FFD700;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  position: absolute;
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ========== ACCORDION ========== */
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+}
+.accordion-item.active .accordion-content {
+  max-height: 500px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.accordion-item.active .accordion-icon {
+  transform: rotate(45deg);
+}
+
+/* ========== DIAGONAL SECTION DIVIDER ========== */
+.diagonal-top {
+  clip-path: polygon(0 8%, 100% 0, 100% 100%, 0 100%);
+}
+.diagonal-bottom {
+  clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%);
+}
+.diagonal-both {
+  clip-path: polygon(0 8%, 100% 0, 100% 92%, 0 100%);
+}
+
+/* ========== SELECTION COLOR ========== */
+::selection {
+  background: rgba(204, 0, 0, 0.5);
+  color: white;
+}
+
+/* ========== SMOOTH TRANSITIONS ========== */
+a, button, img {
+  transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* ========== FOCUS VISIBLE ========== */
+:focus-visible {
+  outline: 2px solid #FFD700;
+  outline-offset: 2px;
+}
+
+/* ========== GRADIENT BORDER (Footer) ========== */
+.gradient-border-top {
+  border-top: 2px solid transparent;
+  border-image: linear-gradient(90deg, #CC0000, #FFD700, #CC0000) 1;
+}
+
+/* ========== SCROLL INDICATOR BOUNCE ========== */
+@keyframes bounce-down {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
+}
+.bounce-down {
+  animation: bounce-down 2s ease-in-out infinite;
+}
+
+/* ========== PULSE RED DOT ========== */
+@keyframes pulse-red {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.5); }
+}
+.pulse-red {
+  animation: pulse-red 2s ease-in-out infinite;
+}
+
+/* ========== MOBILE MENU ========== */
+.mobile-menu {
+  transform: translateX(100%);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mobile-menu.active {
+  transform: translateX(0);
+}
+
+/* ========== HAMBURGER ANIMATION ========== */
+.hamburger span {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.hamburger.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* ========== CARD HOVER EFFECTS ========== */
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-hover:hover {
+  transform: translateY(-8px);
+}
+
+/* ========== IMAGE ZOOM ON HOVER ========== */
+.img-zoom {
+  overflow: hidden;
+}
+.img-zoom img,
+.img-zoom .img-placeholder {
+  transition: transform 0.5s ease;
+}
+.img-zoom:hover img,
+.img-zoom:hover .img-placeholder {
+  transform: scale(1.05);
+}
+
+/* ========== CUSTOM CURSOR ========== */
+.cursor-dot {
+  width: 8px;
+  height: 8px;
+  background: #CC0000;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 10000;
+  top: 0;
+  left: 0;
+  mix-blend-mode: difference;
+}
+.cursor-ring {
+  width: 32px;
+  height: 32px;
+  border: 2px solid #FFD700;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 10000;
+  top: 0;
+  left: 0;
+  transition: width 0.3s ease, height 0.3s ease, border-color 0.3s ease;
+}
+.cursor-ring.hover {
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 215, 0, 0.1);
+  border-color: rgba(255, 215, 0, 0.5);
+}
+
+/* ========== LIGHTBOX ========== */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.95);
+  z-index: 9000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+.lightbox.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* ========== STAT COUNTER SUFFIX ========== */
+/* Suffix is handled by JS counter animation — CSS ::after removed to avoid doubling */
+
+/* ========== VIDEO PLAY BUTTON ========== */
+.play-btn {
+  transition: transform 0.3s ease;
+}
+.play-btn:hover {
+  transform: scale(1.1);
+}
+
+/* ========== LINE CLAMP ========== */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ========== GSAP FALLBACK — Content visible if JS/GSAP fails ========== */
+/* GSAP's from() sets opacity:0 on load; if ScrollTrigger never fires, content stays hidden.
+   This timeout-based fallback ensures visibility after 3s. Applied via JS in main.js */
+.gsap-fallback .animate-in,
+.gsap-fallback .animate-left,
+.gsap-fallback .animate-right,
+.gsap-fallback .animate-scale,
+.gsap-fallback .animate-wipe,
+.gsap-fallback .animate-stagger > * {
+  opacity: 1 !important;
+  transform: none !important;
+  clip-path: none !important;
+}
+
+/* ========== MOBILE TOUCH IMPROVEMENTS ========== */
+@media (max-width: 768px) {
+  /* Disable custom cursor on mobile */
+  .cursor-dot, .cursor-ring { display: none !important; }
+
+  /* Better tap targets */
+  .nav-link, .mobile-nav-link { min-height: 44px; display: flex; align-items: center; }
+
+  /* Prevent horizontal overflow */
+  body { overflow-x: hidden; }
+
+  /* Disable card hover lift on touch */
+  .card-hover:hover { transform: none; }
+
+  /* Ensure back-to-top button doesn't overlap content */
+  #back-to-top { bottom: 20px; right: 16px; width: 44px; height: 44px; }
+}
+
+/* ========== REDUCED MOTION ========== */
+@media (prefers-reduced-motion: reduce) {
+  .speed-line,
+  .particle,
+  .loading-ring,
+  .bounce-down,
+  .pulse-red,
+  .marquee-track {
+    animation: none !important;
+  }
+  * {
+    transition-duration: 0.01ms !important;
+  }
+}

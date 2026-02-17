@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Team Zia | Team Zia Jet Racing</title>
+  <meta name="description" content="Learn about Team Zia Jet Racing and founder Scott R. Weaver — a veteran pilot bringing the fearless spirit of New Mexico to competitive jet racing.">
+  <link rel="canonical" href="https://teamziajetracing.com/about">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="About Team Zia | Team Zia Jet Racing">
+  <meta property="og:description" content="Learn about Team Zia Jet Racing and founder Scott R. Weaver — veteran pilot and competitive jet racer.">
+  <meta property="og:image" content="images/og-image.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://teamziajetracing.com/about">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/logo.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            zia: {
+              red: '#CC0000',
+              'deep-red': '#8B0000',
+              gold: '#FFD700',
+              amber: '#FFA500',
+              black: '#0A0A0A',
+              dark: '#111111',
+              surface: '#1A1A1A',
+              steel: '#2A2A2A',
+              muted: '#888888',
+              light: '#E0E0E0',
+            }
+          },
+          fontFamily: {
+            display: ['Bebas Neue', 'sans-serif'],
+            heading: ['Oswald', 'sans-serif'],
+            body: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/custom.css">
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "About Team Zia Jet Racing",
+    "description": "Learn about Team Zia Jet Racing, founded by veteran pilot Scott R. Weaver",
+    "url": "https://teamziajetracing.com/about",
+    "mainEntity": {
+      "@type": "Person",
+      "name": "Scott R. Weaver",
+      "jobTitle": "Founder & Lead Pilot",
+      "affiliation": {
+        "@type": "SportsTeam",
+        "name": "Team Zia Jet Racing"
+      }
+    }
+  }
+  </script>
+</head>
+<body class="bg-zia-black text-zia-light font-body antialiased overflow-x-hidden">
+
+  <!-- ========== LOADING SCREEN ========== -->
+  <div id="loading-screen" class="loading-screen">
+    <div class="relative flex items-center justify-center">
+      <div class="loading-ring"></div>
+      <img src="images/logo.png" alt="Team Zia Logo" class="loading-logo w-16 h-16 object-contain relative z-10">
+    </div>
+  </div>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-3 relative z-10">
+          <img src="images/logo.png" alt="Team Zia Jet Racing" class="h-12 w-auto">
+          <span class="font-heading text-white text-lg tracking-wider hidden sm:block">TEAM ZIA</span>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <div class="hidden lg:flex items-center gap-8">
+          <a href="index.html" class="nav-link font-heading text-sm uppercase tracking-widest text-white hover:text-zia-gold">Home</a>
+          <a href="about.html" class="nav-link active font-heading text-sm uppercase tracking-widest text-white hover:text-zia-gold">About</a>
+          <a href="team.html" class="nav-link font-heading text-sm uppercase tracking-widest text-white hover:text-zia-gold">Team</a>
+          <a href="fleet.html" class="nav-link font-heading text-sm uppercase tracking-widest text-white hover:text-zia-gold">Fleet</a>
+          <a href="schedule.html" class="nav-link font-heading text-sm uppercase tracking-widest text-white hover:text-zia-gold">Schedule</a>
+          <a href="sponsors.html" class="nav-link font-heading text-sm uppercase tracking-widest text-white hover:text-zia-gold">Sponsors</a>
+          <a href="media.html" class="nav-link font-heading text-sm uppercase tracking-widest text-white hover:text-zia-gold">Media</a>
+          <a href="merch.html" class="nav-link font-heading text-sm uppercase tracking-widest text-white hover:text-zia-gold">Merch</a>
+          <a href="contact.html" class="nav-link font-heading text-sm uppercase tracking-widest text-white hover:text-zia-gold">Contact</a>
+        </div>
+
+        <!-- Mobile Hamburger -->
+        <button id="hamburger" class="lg:hidden hamburger relative z-10 w-10 h-10 flex flex-col items-center justify-center gap-1.5" aria-label="Toggle menu">
+          <span class="block w-6 h-0.5 bg-white origin-center"></span>
+          <span class="block w-6 h-0.5 bg-white origin-center"></span>
+          <span class="block w-6 h-0.5 bg-white origin-center"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu fixed inset-0 bg-zia-black/98 z-40 flex flex-col items-center justify-center gap-6">
+      <a href="index.html" class="mobile-nav-link font-display text-4xl text-white hover:text-zia-gold transition-colors">HOME</a>
+      <a href="about.html" class="mobile-nav-link font-display text-4xl text-white hover:text-zia-gold transition-colors">ABOUT</a>
+      <a href="team.html" class="mobile-nav-link font-display text-4xl text-white hover:text-zia-gold transition-colors">TEAM</a>
+      <a href="fleet.html" class="mobile-nav-link font-display text-4xl text-white hover:text-zia-gold transition-colors">FLEET</a>
+      <a href="schedule.html" class="mobile-nav-link font-display text-4xl text-white hover:text-zia-gold transition-colors">SCHEDULE</a>
+      <a href="sponsors.html" class="mobile-nav-link font-display text-4xl text-white hover:text-zia-gold transition-colors">SPONSORS</a>
+      <a href="media.html" class="mobile-nav-link font-display text-4xl text-white hover:text-zia-gold transition-colors">MEDIA</a>
+      <a href="merch.html" class="mobile-nav-link font-display text-4xl text-white hover:text-zia-gold transition-colors">MERCH</a>
+      <a href="contact.html" class="mobile-nav-link font-display text-4xl text-white hover:text-zia-gold transition-colors">CONTACT</a>
+      <div class="flex gap-4 mt-8">
+        <a href="#" aria-label="Instagram" class="w-10 h-10 rounded-full border border-zia-steel flex items-center justify-center text-zia-muted hover:text-zia-gold hover:border-zia-gold transition-colors">
+          <i data-lucide="instagram" class="w-5 h-5"></i>
+        </a>
+        <a href="#" aria-label="Facebook" class="w-10 h-10 rounded-full border border-zia-steel flex items-center justify-center text-zia-muted hover:text-zia-gold hover:border-zia-gold transition-colors">
+          <i data-lucide="facebook" class="w-5 h-5"></i>
+        </a>
+        <a href="#" aria-label="YouTube" class="w-10 h-10 rounded-full border border-zia-steel flex items-center justify-center text-zia-muted hover:text-zia-gold hover:border-zia-gold transition-colors">
+          <i data-lucide="youtube" class="w-5 h-5"></i>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ========== PAGE HERO ========== -->
+    <section class="relative min-h-[50vh] flex items-center justify-center overflow-hidden noise-overlay">
+      <!-- Cinematic Background -->
+      <div class="absolute inset-0">
+        <img src="images/fleet/action-1.jpg" alt="" class="w-full h-full object-cover opacity-30" style="object-position: center 20%;">
+      </div>
+      <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-zia-black"></div>
+      <div class="absolute inset-0" style="background: radial-gradient(ellipse at center, rgba(204,0,0,0.15) 0%, transparent 70%);"></div>
+
+      <!-- Speed lines -->
+      <div class="speed-line absolute top-[15%] w-[40%]" style="--duration:3s;--delay:0s;"></div>
+      <div class="speed-line absolute top-[25%] w-[60%]" style="--duration:4s;--delay:1s;"></div>
+      <div class="speed-line absolute top-[40%] w-[35%]" style="--duration:2.5s;--delay:0.5s;"></div>
+      <div class="speed-line absolute top-[55%] w-[50%]" style="--duration:3.5s;--delay:2s;"></div>
+      <div class="speed-line absolute top-[70%] w-[45%]" style="--duration:3s;--delay:1.5s;"></div>
+      <div class="speed-line absolute top-[85%] w-[55%]" style="--duration:4.5s;--delay:0.8s;"></div>
+
+      <!-- Content -->
+      <div class="page-hero-content relative z-10 text-center px-6 max-w-4xl mx-auto pt-32 pb-16">
+        <nav class="breadcrumb mb-6 animate-in">
+          <span class="font-mono text-zia-muted text-xs tracking-[0.15em] uppercase">
+            <a href="index.html" class="hover:text-zia-gold transition-colors">Home</a>
+            <span class="mx-2 text-zia-steel">&rarr;</span>
+            <span class="text-zia-gold">About</span>
+          </span>
+        </nav>
+        <h1 class="page-title font-display text-gradient-gold leading-none animate-in" style="font-size: clamp(3rem, 10vw, 7rem);">ABOUT TEAM ZIA</h1>
+      </div>
+    </section>
+
+    <!-- ========== SCOTT R. WEAVER BIO SECTION ========== -->
+    <section class="py-20 lg:py-32 px-6">
+      <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-start">
+        <!-- Portrait Placeholder -->
+        <div class="animate-left">
+          <div class="relative bg-zia-surface rounded-xl overflow-hidden aspect-[3/4] flex items-center justify-center border-l-4 border-zia-gold">
+            <img src="images/hero/pilot-portrait.jpg" alt="Scott R. Weaver - Founder and Lead Pilot of Team Zia Jet Racing" class="w-full h-full object-cover" loading="lazy">
+          </div>
+        </div>
+
+        <!-- Bio Text -->
+        <div class="animate-right">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="w-8 h-0.5 bg-zia-gold inline-block"></span>
+            <span class="font-mono text-zia-gold text-xs tracking-[0.15em] uppercase">Founder &amp; Lead Pilot</span>
+          </div>
+          <h2 class="font-heading text-white font-bold leading-tight" style="font-size: clamp(1.75rem, 3.5vw, 3rem);">Scott R. Weaver</h2>
+
+          <p class="text-zia-light mt-6 leading-relaxed">Scott R. Weaver's love affair with the sky began long before he ever strapped into a cockpit. Growing up in New Mexico, surrounded by endless desert horizons and wide-open skies, he knew from an early age that he was meant to fly. By 2005, Scott had completed his first solo flight, and from that moment on, aviation became more than a passion — it became his life's purpose.</p>
+
+          <p class="text-zia-light mt-4 leading-relaxed">Following his calling to serve, Scott entered military service in 2010, where he honed his skills as a disciplined aviator under the most demanding conditions imaginable. Military aviation taught him the precision, situational awareness, and split-second decision-making that would later define his racing career. Those years forged a pilot who could remain calm under pressure and push both himself and his aircraft to the absolute limit.</p>
+
+          <!-- Pull Quote -->
+          <blockquote class="my-8 pl-6 border-l-4 border-zia-gold animate-in">
+            <p class="font-heading text-zia-gold text-lg lg:text-xl italic leading-relaxed">"Speed isn't just about how fast you fly — it's about how precisely you cut through everything standing in your way."</p>
+            <cite class="text-zia-muted text-sm mt-2 block not-italic">— Scott R. Weaver</cite>
+          </blockquote>
+
+          <p class="text-zia-light mt-4 leading-relaxed">After returning to civilian aviation in 2018, Scott discovered the world of competitive jet racing — and it ignited something fierce within him. The combination of raw speed, tactical strategy, and sheer adrenaline was unlike anything he had experienced. He began dreaming of building a team that could compete at the highest levels while carrying the proud spirit of his home state with him.</p>
+
+          <p class="text-zia-light mt-4 leading-relaxed">In 2024, that dream became reality. Scott founded Team Zia Jet Racing, naming it after the sacred Zia sun symbol that represents the values of New Mexico: strength, unity, and an unwavering connection to the land. With a hand-picked crew, a race-ready fleet, and an unrelenting drive to win, Scott leads Team Zia into its inaugural 2026 race season with the same fearless determination that has defined his entire career.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== MISSION & VISION ========== -->
+    <section class="py-20 lg:py-32 px-6 bg-zia-dark/50">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-12 animate-in">
+          <div class="flex items-center justify-center gap-3 mb-4">
+            <span class="w-8 h-0.5 bg-zia-gold inline-block"></span>
+            <span class="font-mono text-zia-gold text-xs tracking-[0.15em] uppercase">What Drives Us</span>
+            <span class="w-8 h-0.5 bg-zia-gold inline-block"></span>
+          </div>
+          <h2 class="font-heading text-white font-bold" style="font-size: clamp(1.75rem, 4vw, 3rem);">Mission &amp; Vision</h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- Mission Card -->
+          <div class="glass rounded-xl p-8 lg:p-10 animate-left">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="w-12 h-12 rounded-full bg-zia-red/20 flex items-center justify-center">
+                <i data-lucide="crosshair" class="w-6 h-6 text-zia-red"></i>
+              </div>
+              <h3 class="font-heading text-white text-xl font-bold uppercase tracking-wider">Our Mission</h3>
+            </div>
+            <p class="text-zia-light leading-relaxed">To compete at the highest levels of professional jet racing while representing the bold, fearless spirit of New Mexico. Team Zia is committed to pushing the boundaries of speed and precision, inspiring the next generation of aviators, and proving that greatness can emerge from anywhere — even the sun-scorched deserts of the Land of Enchantment.</p>
+          </div>
+
+          <!-- Vision Card -->
+          <div class="glass rounded-xl p-8 lg:p-10 animate-right">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="w-12 h-12 rounded-full bg-zia-gold/20 flex items-center justify-center">
+                <i data-lucide="eye" class="w-6 h-6 text-zia-gold"></i>
+              </div>
+              <h3 class="font-heading text-white text-xl font-bold uppercase tracking-wider">Our Vision</h3>
+            </div>
+            <p class="text-zia-light leading-relaxed">To become a dominant force in international jet racing, recognized not only for our speed on the course but for our integrity, innovation, and the deep-rooted values we carry into every competition. We envision a future where Team Zia stands on podiums around the world — a testament to what relentless passion and New Mexico grit can achieve.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== TEAM VALUES ========== -->
+    <section class="py-20 lg:py-32 px-6">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-12 animate-in">
+          <div class="flex items-center justify-center gap-3 mb-4">
+            <span class="w-8 h-0.5 bg-zia-gold inline-block"></span>
+            <span class="font-mono text-zia-gold text-xs tracking-[0.15em] uppercase">Core Principles</span>
+            <span class="w-8 h-0.5 bg-zia-gold inline-block"></span>
+          </div>
+          <h2 class="font-heading text-white font-bold" style="font-size: clamp(1.75rem, 4vw, 3rem);">Our Values</h2>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Speed -->
+          <div class="glass rounded-xl p-8 text-center card-hover animate-stagger">
+            <div class="w-16 h-16 rounded-full bg-zia-red/20 flex items-center justify-center mx-auto mb-6">
+              <i data-lucide="zap" class="w-8 h-8 text-zia-red"></i>
+            </div>
+            <h3 class="font-heading text-white text-lg font-bold uppercase tracking-wider mb-3">Speed</h3>
+            <p class="text-zia-muted text-sm leading-relaxed">We chase the horizon at full throttle. Speed is not just a measurement — it is a mindset that defines everything we do, on the ground and in the air.</p>
+          </div>
+
+          <!-- Precision -->
+          <div class="glass rounded-xl p-8 text-center card-hover animate-stagger">
+            <div class="w-16 h-16 rounded-full bg-zia-gold/20 flex items-center justify-center mx-auto mb-6">
+              <i data-lucide="target" class="w-8 h-8 text-zia-gold"></i>
+            </div>
+            <h3 class="font-heading text-white text-lg font-bold uppercase tracking-wider mb-3">Precision</h3>
+            <p class="text-zia-muted text-sm leading-relaxed">Every adjustment, every maneuver, every decision is calculated with surgical accuracy. At these speeds, there is no margin for error.</p>
+          </div>
+
+          <!-- Courage -->
+          <div class="glass rounded-xl p-8 text-center card-hover animate-stagger">
+            <div class="w-16 h-16 rounded-full bg-zia-red/20 flex items-center justify-center mx-auto mb-6">
+              <i data-lucide="bird" class="w-8 h-8 text-zia-red"></i>
+            </div>
+            <h3 class="font-heading text-white text-lg font-bold uppercase tracking-wider mb-3">Courage</h3>
+            <p class="text-zia-muted text-sm leading-relaxed">It takes fearless resolve to strap into a jet and race wingtip-to-wingtip. Courage is the fuel that powers Team Zia beyond every limit.</p>
+          </div>
+
+          <!-- Innovation -->
+          <div class="glass rounded-xl p-8 text-center card-hover animate-stagger">
+            <div class="w-16 h-16 rounded-full bg-zia-gold/20 flex items-center justify-center mx-auto mb-6">
+              <i data-lucide="wrench" class="w-8 h-8 text-zia-gold"></i>
+            </div>
+            <h3 class="font-heading text-white text-lg font-bold uppercase tracking-wider mb-3">Innovation</h3>
+            <p class="text-zia-muted text-sm leading-relaxed">We constantly evolve — refining our aircraft, our strategy, and our approach. Innovation keeps us ahead of the pack and ready for what comes next.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== TIMELINE ========== -->
+    <section class="py-20 lg:py-32 px-6 bg-zia-dark/50">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-16 animate-in">
+          <div class="flex items-center justify-center gap-3 mb-4">
+            <span class="w-8 h-0.5 bg-zia-gold inline-block"></span>
+            <span class="font-mono text-zia-gold text-xs tracking-[0.15em] uppercase">Our Journey</span>
+            <span class="w-8 h-0.5 bg-zia-gold inline-block"></span>
+          </div>
+          <h2 class="font-heading text-white font-bold" style="font-size: clamp(1.75rem, 4vw, 3rem);">The Road to Race Day</h2>
+        </div>
+
+        <!-- Vertical Timeline -->
+        <div class="relative">
+          <!-- Vertical Line -->
+          <div class="absolute left-6 lg:left-1/2 top-0 bottom-0 w-0.5 bg-zia-steel lg:-translate-x-0.5"></div>
+
+          <!-- Milestone 1: 2005 -->
+          <div class="relative flex flex-col lg:flex-row lg:items-center mb-12 animate-left">
+            <!-- Dot -->
+            <div class="absolute left-6 lg:left-1/2 w-4 h-4 rounded-full bg-zia-gold border-4 border-zia-black -translate-x-1/2 z-10"></div>
+            <!-- Content (left on desktop) -->
+            <div class="lg:w-1/2 lg:pr-12 lg:text-right pl-14 lg:pl-0">
+              <span class="font-mono text-zia-gold text-sm font-bold tracking-wider">2005</span>
+              <h3 class="font-heading text-white text-xl font-bold mt-1">First Solo Flight</h3>
+              <p class="text-zia-muted text-sm mt-2 leading-relaxed">Scott R. Weaver takes to the skies alone for the first time over the New Mexico desert, igniting a lifelong passion for aviation that would eventually lead him to the world of jet racing.</p>
+            </div>
+            <div class="hidden lg:block lg:w-1/2"></div>
+          </div>
+
+          <!-- Milestone 2: 2010 -->
+          <div class="relative flex flex-col lg:flex-row lg:items-center mb-12 animate-right">
+            <div class="absolute left-6 lg:left-1/2 w-4 h-4 rounded-full bg-zia-red border-4 border-zia-black -translate-x-1/2 z-10"></div>
+            <div class="hidden lg:block lg:w-1/2"></div>
+            <div class="lg:w-1/2 lg:pl-12 pl-14">
+              <span class="font-mono text-zia-red text-sm font-bold tracking-wider">2010</span>
+              <h3 class="font-heading text-white text-xl font-bold mt-1">Military Service</h3>
+              <p class="text-zia-muted text-sm mt-2 leading-relaxed">Scott enters military aviation, where he develops the discipline, precision, and tactical instincts that would become the foundation of his racing career. Years of rigorous training forge an elite aviator.</p>
+            </div>
+          </div>
+
+          <!-- Milestone 3: 2018 -->
+          <div class="relative flex flex-col lg:flex-row lg:items-center mb-12 animate-left">
+            <div class="absolute left-6 lg:left-1/2 w-4 h-4 rounded-full bg-zia-gold border-4 border-zia-black -translate-x-1/2 z-10"></div>
+            <div class="lg:w-1/2 lg:pr-12 lg:text-right pl-14 lg:pl-0">
+              <span class="font-mono text-zia-gold text-sm font-bold tracking-wider">2018</span>
+              <h3 class="font-heading text-white text-xl font-bold mt-1">Return to Civilian Aviation</h3>
+              <p class="text-zia-muted text-sm mt-2 leading-relaxed">After completing his military service, Scott transitions back to civilian aviation and discovers the electrifying world of competitive jet racing — a perfect match for his skill set and competitive drive.</p>
+            </div>
+            <div class="hidden lg:block lg:w-1/2"></div>
+          </div>
+
+          <!-- Milestone 4: 2022 -->
+          <div class="relative flex flex-col lg:flex-row lg:items-center mb-12 animate-right">
+            <div class="absolute left-6 lg:left-1/2 w-4 h-4 rounded-full bg-zia-red border-4 border-zia-black -translate-x-1/2 z-10"></div>
+            <div class="hidden lg:block lg:w-1/2"></div>
+            <div class="lg:w-1/2 lg:pl-12 pl-14">
+              <span class="font-mono text-zia-red text-sm font-bold tracking-wider">2022</span>
+              <h3 class="font-heading text-white text-xl font-bold mt-1">The Zia Dream</h3>
+              <p class="text-zia-muted text-sm mt-2 leading-relaxed">Scott begins laying the groundwork for his own racing team, drawing inspiration from New Mexico's Zia sun symbol and its values of strength and unity. The vision for Team Zia Jet Racing takes shape.</p>
+            </div>
+          </div>
+
+          <!-- Milestone 5: 2024 -->
+          <div class="relative flex flex-col lg:flex-row lg:items-center mb-12 animate-left">
+            <div class="absolute left-6 lg:left-1/2 w-4 h-4 rounded-full bg-zia-gold border-4 border-zia-black -translate-x-1/2 z-10"></div>
+            <div class="lg:w-1/2 lg:pr-12 lg:text-right pl-14 lg:pl-0">
+              <span class="font-mono text-zia-gold text-sm font-bold tracking-wider">2024</span>
+              <h3 class="font-heading text-white text-xl font-bold mt-1">Team Zia Founded</h3>
+              <p class="text-zia-muted text-sm mt-2 leading-relaxed">Team Zia Jet Racing is officially established. Scott assembles a world-class crew, acquires the fleet, and begins intensive preparations for competitive racing at the highest level.</p>
+            </div>
+            <div class="hidden lg:block lg:w-1/2"></div>
+          </div>
+
+          <!-- Milestone 6: 2026 -->
+          <div class="relative flex flex-col lg:flex-row lg:items-center animate-right">
+            <div class="absolute left-6 lg:left-1/2 w-4 h-4 rounded-full bg-zia-red border-4 border-zia-black -translate-x-1/2 z-10"></div>
+            <div class="hidden lg:block lg:w-1/2"></div>
+            <div class="lg:w-1/2 lg:pl-12 pl-14">
+              <span class="font-mono text-zia-red text-sm font-bold tracking-wider">2026</span>
+              <h3 class="font-heading text-white text-xl font-bold mt-1">First Race Season</h3>
+              <p class="text-zia-muted text-sm mt-2 leading-relaxed">Team Zia takes to the skies competitively for the first time, entering the Reno National Championship Air Races and marking the dawn of a new era in jet racing. The dream becomes reality.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== PRE-FOOTER CTA ========== -->
+    <section class="relative py-20 lg:py-28 px-6 noise-overlay" style="background: linear-gradient(135deg, #8B0000, #CC0000, #8B0000);">
+      <div class="relative z-10 max-w-4xl mx-auto text-center animate-in">
+        <h2 class="font-display text-white leading-none" style="font-size: clamp(2rem, 6vw, 4.5rem);">WANT TO JOIN THE TEAM?</h2>
+        <p class="text-white/70 mt-4 text-lg">Get in touch with Team Zia Jet Racing</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center mt-10">
+          <a href="contact.html" class="bg-white text-zia-red font-heading uppercase tracking-wider px-8 py-4 rounded-lg text-sm hover:bg-zia-gold hover:text-zia-black transition-colors">Contact Us</a>
+          <a href="team.html" class="border-2 border-white text-white font-heading uppercase tracking-wider px-8 py-4 rounded-lg text-sm hover:bg-white hover:text-zia-red transition-colors">Meet the Team</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="bg-zia-black gradient-border-top pt-16 pb-8 px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-20">
+        <!-- Column 1: Brand -->
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <img src="images/logo.png" alt="Team Zia" class="h-10 w-auto">
+            <span class="font-heading text-white text-lg tracking-wider">TEAM ZIA</span>
+          </div>
+          <p class="font-heading text-zia-gold text-sm tracking-wider mb-3">Born to Race. Built to Win.</p>
+          <p class="text-zia-muted text-sm leading-relaxed">Team Zia Jet Racing brings the fearless spirit of New Mexico to the world of competitive jet racing. Founded by veteran pilot Scott R. Weaver.</p>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div>
+          <h4 class="font-heading text-white text-sm uppercase tracking-wider mb-6">Quick Links</h4>
+          <div class="grid grid-cols-2 gap-x-8 gap-y-3">
+            <a href="index.html" class="text-zia-muted text-sm hover:text-zia-gold transition-colors">Home</a>
+            <a href="sponsors.html" class="text-zia-muted text-sm hover:text-zia-gold transition-colors">Sponsors</a>
+            <a href="about.html" class="text-zia-muted text-sm hover:text-zia-gold transition-colors">About</a>
+            <a href="media.html" class="text-zia-muted text-sm hover:text-zia-gold transition-colors">Media</a>
+            <a href="team.html" class="text-zia-muted text-sm hover:text-zia-gold transition-colors">Team</a>
+            <a href="merch.html" class="text-zia-muted text-sm hover:text-zia-gold transition-colors">Merch</a>
+            <a href="fleet.html" class="text-zia-muted text-sm hover:text-zia-gold transition-colors">Fleet</a>
+            <a href="contact.html" class="text-zia-muted text-sm hover:text-zia-gold transition-colors">Contact</a>
+            <a href="schedule.html" class="text-zia-muted text-sm hover:text-zia-gold transition-colors">Schedule</a>
+          </div>
+        </div>
+
+        <!-- Column 3: Connect -->
+        <div>
+          <h4 class="font-heading text-white text-sm uppercase tracking-wider mb-6">Connect With Us</h4>
+          <div class="flex gap-3 mb-6">
+            <a href="#" aria-label="Instagram" class="w-10 h-10 rounded-full border border-zia-steel flex items-center justify-center text-zia-muted hover:text-zia-gold hover:border-zia-gold hover:glow-gold transition-all">
+              <i data-lucide="instagram" class="w-4 h-4"></i>
+            </a>
+            <a href="#" aria-label="Facebook" class="w-10 h-10 rounded-full border border-zia-steel flex items-center justify-center text-zia-muted hover:text-zia-gold hover:border-zia-gold transition-all">
+              <i data-lucide="facebook" class="w-4 h-4"></i>
+            </a>
+            <a href="#" aria-label="X (Twitter)" class="w-10 h-10 rounded-full border border-zia-steel flex items-center justify-center text-zia-muted hover:text-zia-gold hover:border-zia-gold transition-all">
+              <i data-lucide="twitter" class="w-4 h-4"></i>
+            </a>
+            <a href="#" aria-label="YouTube" class="w-10 h-10 rounded-full border border-zia-steel flex items-center justify-center text-zia-muted hover:text-zia-gold hover:border-zia-gold transition-all">
+              <i data-lucide="youtube" class="w-4 h-4"></i>
+            </a>
+          </div>
+          <a href="mailto:info@teamziajetracing.com" class="text-zia-muted text-sm hover:text-zia-gold transition-colors">info@teamziajetracing.com</a>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="border-t border-zia-steel mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-zia-muted text-xs">&copy; 2026 Team Zia Jet Racing. All Rights Reserved.</p>
+        <p class="text-zia-muted text-xs">Designed &amp; Developed by <a href="#" class="text-zia-gold hover:underline">Ultra Tech LLC</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== BACK TO TOP ========== -->
+  <button id="back-to-top" class="fixed bottom-6 right-6 z-40 w-12 h-12 rounded-full bg-zia-red text-white flex items-center justify-center opacity-0 pointer-events-none hover:bg-zia-gold hover:scale-110 transition-all" aria-label="Back to top">
+    <i data-lucide="chevron-up" class="w-5 h-5"></i>
+  </button>
+
+  <!-- ========== SCRIPTS ========== -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>lucide.createIcons();</script>
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/countdown.js"></script>
+  <script src="js/counter.js"></script>
+  <script src="js/cursor.js"></script>
+</body>
+</html>

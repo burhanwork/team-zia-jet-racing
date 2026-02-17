@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Team Zia Jet Racing</title>
+  <meta name="description" content="Get in touch with Team Zia Jet Racing. Reach out for sponsorship inquiries, media requests, or to join our crew.">
+  <link rel="canonical" href="https://teamziajetracing.com/contact">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Contact | Team Zia Jet Racing">
+  <meta property="og:description" content="Get in touch with Team Zia Jet Racing. Sponsorship, media, or join the crew.">
+  <meta property="og:image" content="images/og-image.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://teamziajetracing.com/contact">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/logo.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            zia: {
+              red: '#CC0000',
+              'deep-red': '#8B0000',
+              gold: '#FFD700',
+              amber: '#FFA500',
+              black: '#0A0A0A',
+              dark: '#111111',
+              surface: '#1A1A1A',
+              steel: '#2A2A2A',
+              muted: '#888888',
+              light: '#E0E0E0',
+            }
+          },
+          fontFamily: {
+            display: ['Bebas Neue', 'sans-serif'],
+            heading: ['Oswald', 'sans-serif'],
+            body: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/custom.css">
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact Team Zia Jet Racing",
+    "description": "Get in touch with Team Zia Jet Racing for sponsorship, media, or team inquiries.",
+    "url": "https://teamziajetracing.com/contact"
+  }
+  </script>
+</head>
+<body class="bg-zia-black text-zia-light font-body antialiased overflow-x-hidden">
+
+  <!-- ========== LOADING SCREEN ========== -->
+  <div id="loading-screen" class="loading-screen">
+    <div class="relative flex items-center justify-center">
+      <div class="loading-ring"></div>
+      <img src="images/logo.png" alt="Team Zia Logo" class="loading-logo w-16 h-16 object-contain relative z-10">
+    </div>
+  </div>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-3 relative z-10">
+          <img src="images/logo.png" alt="Team Zia Jet Racing" class="h-12 w-auto">
+          <span class="font-heading text-white text-lg tracking-wider hidden sm:block">TEAM ZIA</span>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <div class="hidden lg:flex items-center gap-8">
+          <a href="index.html" class="nav-link font-heading text-sm uppercase tracking-widest text-white hover:text-zia-gold">Home</a>
+          <a href="about.html" class="nav-link font-heading text-sm uppercase tracking-widest text-white hover:text-zia-gold">About</a>
+          <a href="team.html" class="nav-link font-heading text-sm uppercase tracking-widest text-white hover:text-zia-gold">Team</a>
+          <a href="fleet.html" class="nav-link font-heading text-sm uppercase tracking-widest text-white hover:text-zia-gold">Fleet</a>
+          <a href="schedule.html" class="nav-link font-heading text-sm uppercase tracking-widest text-white hover:text-zia-gold">Schedule</a>
+          <a href="sponsors.html" class="nav-link font-heading text-sm uppercase tracking-widest text-white hover:text-zia-gold">Sponsors</a>
+          <a href="media.html" class="nav-link font-heading text-sm uppercase tracking-widest text-white hover:text-zia-gold">Media</a>
+          <a href="merch.html" class="nav-link font-heading text-sm uppercase tracking-widest text-white hover:text-zia-gold">Merch</a>
+          <a href="contact.html" class="nav-link active font-heading text-sm uppercase tracking-widest text-white hover:text-zia-gold">Contact</a>
+        </div>
+
+        <!-- Mobile Hamburger -->
+        <button id="hamburger" class="lg:hidden hamburger relative z-10 w-10 h-10 flex flex-col items-center justify-center gap-1.5" aria-label="Toggle menu">
+          <span class="block w-6 h-0.5 bg-white origin-center"></span>
+          <span class="block w-6 h-0.5 bg-white origin-center"></span>
+          <span class="block w-6 h-0.5 bg-white origin-center"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu fixed inset-0 bg-zia-black/98 z-40 flex flex-col items-center justify-center gap-6">
+      <a href="index.html" class="mobile-nav-link font-display text-4xl text-white hover:text-zia-gold transition-colors">HOME</a>
+      <a href="about.html" class="mobile-nav-link font-display text-4xl text-white hover:text-zia-gold transition-colors">ABOUT</a>
+      <a href="team.html" class="mobile-nav-link font-display text-4xl text-white hover:text-zia-gold transition-colors">TEAM</a>
+      <a href="fleet.html" class="mobile-nav-link font-display text-4xl text-white hover:text-zia-gold transition-colors">FLEET</a>
+      <a href="schedule.html" class="mobile-nav-link font-display text-4xl text-white hover:text-zia-gold transition-colors">SCHEDULE</a>
+      <a href="sponsors.html" class="mobile-nav-link font-display text-4xl text-white hover:text-zia-gold transition-colors">SPONSORS</a>
+      <a href="media.html" class="mobile-nav-link font-display text-4xl text-white hover:text-zia-gold transition-colors">MEDIA</a>
+      <a href="merch.html" class="mobile-nav-link font-display text-4xl text-white hover:text-zia-gold transition-colors">MERCH</a>
+      <a href="contact.html" class="mobile-nav-link font-display text-4xl text-white hover:text-zia-gold transition-colors">CONTACT</a>
+      <div class="flex gap-4 mt-8">
+        <a href="#" aria-label="Instagram" class="w-10 h-10 rounded-full border border-zia-steel flex items-center justify-center text-zia-muted hover:text-zia-gold hover:border-zia-gold transition-colors">
+          <i data-lucide="instagram" class="w-5 h-5"></i>
+        </a>
+        <a href="#" aria-label="Facebook" class="w-10 h-10 rounded-full border border-zia-steel flex items-center justify-center text-zia-muted hover:text-zia-gold hover:border-zia-gold transition-colors">
+          <i data-lucide="facebook" class="w-5 h-5"></i>
+        </a>
+        <a href="#" aria-label="YouTube" class="w-10 h-10 rounded-full border border-zia-steel flex items-center justify-center text-zia-muted hover:text-zia-gold hover:border-zia-gold transition-colors">
+          <i data-lucide="youtube" class="w-5 h-5"></i>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ========== PAGE HERO ========== -->
+    <section class="relative min-h-[50vh] flex items-center justify-center overflow-hidden noise-overlay">
+      <!-- Cinematic Background -->
+      <div class="absolute inset-0">
+        <img src="images/hero/cockpit-interior.jpg" alt="" class="w-full h-full object-cover opacity-30" style="object-position: center 20%;">
+      </div>
+      <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-zia-black"></div>
+      <div class="absolute inset-0" style="background: radial-gradient(ellipse at center, rgba(204,0,0,0.15) 0%, transparent 70%);"></div>
+
+      <!-- Speed lines -->
+      <div class="speed-line absolute top-[15%] w-[40%]" style="--duration:3s;--delay:0s;"></div>
+      <div class="speed-line absolute top-[25%] w-[60%]" style="--duration:4s;--delay:1s;"></div>
+      <div class="speed-line absolute top-[40%] w-[35%]" style="--duration:2.5s;--delay:0.5s;"></div>
+      <div class="speed-line absolute top-[55%] w-[50%]" style="--duration:3.5s;--delay:2s;"></div>
+      <div class="speed-line absolute top-[70%] w-[45%]" style="--duration:3s;--delay:1.5s;"></div>
+      <div class="speed-line absolute top-[85%] w-[55%]" style="--duration:4.5s;--delay:0.8s;"></div>
+
+      <!-- Content -->
+      <div class="page-hero-content relative z-10 text-center px-6 max-w-4xl mx-auto">
+        <div class="breadcrumb flex items-center justify-center gap-2 mb-4">
+          <a href="index.html" class="font-mono text-zia-muted text-xs tracking-[0.15em] uppercase hover:text-zia-gold transition-colors">Home</a>
+          <span class="text-zia-muted text-xs">&rarr;</span>
+          <span class="font-mono text-zia-gold text-xs tracking-[0.15em] uppercase">Contact</span>
+        </div>
+        <h1 class="page-title font-display text-gradient-gold leading-none" style="font-size: clamp(3rem, 10vw, 8rem);">LET'S TALK</h1>
+        <p class="page-subtitle font-heading text-zia-light tracking-wider mt-4" style="font-size: clamp(0.9rem, 2vw, 1.25rem);">Whether it's sponsorship, media, or joining the crew — we'd love to hear from you</p>
+      </div>
+    </section>
+
+    <!-- ========== CONTACT SECTION ========== -->
+    <section class="py-20 lg:py-32 px-6">
+      <div class="max-w-7xl mx-auto grid lg:grid-cols-5 gap-12">
+
+        <!-- Contact Form -->
+        <div class="lg:col-span-3">
+          <div class="glass rounded-xl p-8 lg:p-12">
+            <form id="contact-form">
+              <div class="mb-6">
+                <label for="name" class="font-heading text-sm text-zia-muted uppercase tracking-wider mb-2 block">Full Name</label>
+                <input type="text" id="name" name="name" required class="bg-zia-dark border border-zia-steel rounded-lg px-4 py-3 text-white w-full focus:border-zia-red focus:ring-1 focus:ring-zia-red outline-none transition-colors" placeholder="Your full name">
+              </div>
+
+              <div class="mb-6">
+                <label for="email" class="font-heading text-sm text-zia-muted uppercase tracking-wider mb-2 block">Email</label>
+                <input type="email" id="email" name="email" required class="bg-zia-dark border border-zia-steel rounded-lg px-4 py-3 text-white w-full focus:border-zia-red focus:ring-1 focus:ring-zia-red outline-none transition-colors" placeholder="your@email.com">
+              </div>
+
+              <div class="mb-6">
+                <label for="subject" class="font-heading text-sm text-zia-muted uppercase tracking-wider mb-2 block">Subject</label>
+                <select id="subject" name="subject" class="bg-zia-dark border border-zia-steel rounded-lg px-4 py-3 text-white w-full focus:border-zia-red focus:ring-1 focus:ring-zia-red outline-none transition-colors">
+                  <option value="" disabled selected>Select a subject</option>
+                  <option value="General Inquiry">General Inquiry</option>
+                  <option value="Sponsorship">Sponsorship</option>
+                  <option value="Media / Press">Media / Press</option>
+                  <option value="Join the Team">Join the Team</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+
+              <div class="mb-6">
+                <label for="message" class="font-heading text-sm text-zia-muted uppercase tracking-wider mb-2 block">Message</label>
+                <textarea id="message" name="message" rows="5" required class="bg-zia-dark border border-zia-steel rounded-lg px-4 py-3 text-white w-full focus:border-zia-red focus:ring-1 focus:ring-zia-red outline-none transition-colors resize-vertical" placeholder="Your message..."></textarea>
+              </div>
+
+              <button type="submit" class="w-full bg-zia-red text-white font-heading uppercase tracking-wider py-4 rounded-lg btn-sweep btn-red-to-gold hover:text-zia-black transition-colors">SEND MESSAGE</button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="lg:col-span-2">
+          <div class="glass rounded-xl p-8">
+
+            <!-- Email -->
+            <div class="flex items-start gap-4">
+              <i data-lucide="mail" class="text-zia-gold w-6 h-6 shrink-0 mt-1"></i>
+              <div>
+                <span class="font-heading text-sm text-zia-muted uppercase tracking-wider block">Email Us</span>
+                <a href="mailto:info@teamziajetracing.com" class="text-white hover:text-zia-gold transition-colors">info@teamziajetracing.com</a>
+              </div>
+            </div>
+
+            <div class="border-b border-zia-steel my-6"></div>
+
+            <!-- Location -->
+            <div class="flex items-start gap-4">
+              <i data-lucide="map-pin" class="text-zia-gold w-6 h-6 shrink-0 mt-1"></i>
+              <div>
+                <span class="font-heading text-sm text-zia-muted uppercase tracking-wider block">Based In</span>
+                <span class="text-white">New Mexico, USA</span>
+              </div>
+            </div>
+
+            <div class="border-b border-zia-steel my-6"></div>
+
+            <!-- Social -->
+            <div>
+              <span class="font-heading text-sm text-zia-muted uppercase tracking-wider block mb-4">Follow Us</span>
+              <div class="space-y-3">
+                <a href="#" class="flex items-center gap-3 text-zia-muted hover:text-zia-gold transition-colors">
+                  <i data-lucide="instagram" class="w-5 h-5"></i>
+                  <span>Instagram</span>
+                </a>
+                <a href="#" class="flex items-center gap-3 text-zia-muted hover:text-zia-gold transition-colors">
+                  <i data-lucide="facebook" class="w-5 h-5"></i>
+                  <span>Facebook</span>
+                </a>
+                <a href="#" class="flex items-center gap-3 text-zia-muted hover:text-zia-gold transition-colors">
+                  <i data-lucide="twitter" class="w-5 h-5"></i>
+                  <span>X (Twitter)</span>
+                </a>
+                <a href="#" class="flex items-center gap-3 text-zia-muted hover:text-zia-gold transition-colors">
+                  <i data-lucide="youtube" class="w-5 h-5"></i>
+                  <span>YouTube</span>
+                </a>
+                <a href="#" class="flex items-center gap-3 text-zia-muted hover:text-zia-gold transition-colors">
+                  <i data-lucide="music" class="w-5 h-5"></i>
+                  <span>TikTok</span>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========== FAQ SECTION ========== -->
+    <section class="py-20 px-6">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="font-heading text-white text-center mb-12" style="font-size: clamp(1.75rem, 4vw, 3rem);">FREQUENTLY ASKED QUESTIONS</h2>
+
+        <!-- Accordion Item 1 -->
+        <div class="accordion-item mb-4">
+          <button class="w-full text-left bg-zia-surface rounded-lg px-6 py-4 flex justify-between items-center cursor-pointer">
+            <span class="font-heading text-white">Where is Team Zia based?</span>
+            <i data-lucide="plus" class="accordion-icon text-zia-gold w-5 h-5 transition-transform"></i>
+          </button>
+          <div class="accordion-content px-6 text-zia-muted">
+            <p class="py-4">Team Zia Jet Racing is proudly based in New Mexico, the Land of Enchantment. Our operations center is situated in the heart of the Southwest, giving us access to some of the best flying conditions in the country.</p>
+          </div>
+        </div>
+
+        <!-- Accordion Item 2 -->
+        <div class="accordion-item mb-4">
+          <button class="w-full text-left bg-zia-surface rounded-lg px-6 py-4 flex justify-between items-center cursor-pointer">
+            <span class="font-heading text-white">How can I sponsor the team?</span>
+            <i data-lucide="plus" class="accordion-icon text-zia-gold w-5 h-5 transition-transform"></i>
+          </button>
+          <div class="accordion-content px-6 text-zia-muted">
+            <p class="py-4">We offer multiple sponsorship tiers from Bronze to Platinum. Visit our Sponsors page for detailed information, or contact us directly through this form. We're always excited to discuss partnership opportunities.</p>
+          </div>
+        </div>
+
+        <!-- Accordion Item 3 -->
+        <div class="accordion-item mb-4">
+          <button class="w-full text-left bg-zia-surface rounded-lg px-6 py-4 flex justify-between items-center cursor-pointer">
+            <span class="font-heading text-white">Do you attend public events?</span>
+            <i data-lucide="plus" class="accordion-icon text-zia-gold w-5 h-5 transition-transform"></i>
+          </button>
+          <div class="accordion-content px-6 text-zia-muted">
+            <p class="py-4">Absolutely! We participate in air races, airshows, and community events throughout the year. Check our Race Schedule page for upcoming appearances where you can see Team Zia in action.</p>
+          </div>
+        </div>
+
+        <!-- Accordion Item 4 -->
+        <div class="accordion-item mb-4">
+          <button class="w-full text-left bg-zia-surface rounded-lg px-6 py-4 flex justify-between items-center cursor-pointer">
+            <span class="font-heading text-white">Can I visit the hangar?</span>
+            <i data-lucide="plus" class="accordion-icon text-zia-gold w-5 h-5 transition-transform"></i>
+          </button>
+          <div class="accordion-content px-6 text-zia-muted">
+            <p class="py-4">We occasionally host hangar days for sponsors, fans, and aviation enthusiasts. Follow us on social media or sign up for our newsletter to be the first to know about upcoming open hangar events.</p>
+          </div>
+        </div>
+
+        <!-- Accordion Item 5 -->
+        <div class="accordion-item mb-4">
+          <button class="w-full text-left bg-zia-surface rounded-lg px-6 py-4 flex justify-between items-center cursor-pointer">
+            <span class="font-heading text-white">How do I join the team?</span>
+            <i data-lucide="plus" class="accordion-icon text-zia-gold w-5 h-5 transition-transform"></i>
+          </button>
+          <div class="accordion-content px-6 text-zia-muted">
+            <p class="py-4">We're always looking for talented and passionate individuals to join our crew. Whether you're a pilot, mechanic, engineer, or marketing professional, fill out the contact form above and tell us about yourself.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="bg-zia-black gradient-border-top pt-16 pb-8 px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-20">
+        <!-- Column 1: Brand -->
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <img src="images/logo.png" alt="Team Zia" class="h-10 w-auto">
+            <span class="font-heading text-white text-lg tracking-wider">TEAM ZIA</span>
+          </div>
+          <p class="font-heading text-zia-gold text-sm tracking-wider mb-3">Born to Race. Built to Win.</p>
+          <p class="text-zia-muted text-sm leading-relaxed">Team Zia Jet Racing brings the fearless spirit of New Mexico to the world of competitive jet racing. Founded by veteran pilot Scott R. Weaver.</p>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div>
+          <h4 class="font-heading text-white text-sm uppercase tracking-wider mb-6">Quick Links</h4>
+          <div class="grid grid-cols-2 gap-x-8 gap-y-3">
+            <a href="index.html" class="text-zia-muted text-sm hover:text-zia-gold transition-colors">Home</a>
+            <a href="sponsors.html" class="text-zia-muted text-sm hover:text-zia-gold transition-colors">Sponsors</a>
+            <a href="about.html" class="text-zia-muted text-sm hover:text-zia-gold transition-colors">About</a>
+            <a href="media.html" class="text-zia-muted text-sm hover:text-zia-gold transition-colors">Media</a>
+            <a href="team.html" class="text-zia-muted text-sm hover:text-zia-gold transition-colors">Team</a>
+            <a href="merch.html" class="text-zia-muted text-sm hover:text-zia-gold transition-colors">Merch</a>
+            <a href="fleet.html" class="text-zia-muted text-sm hover:text-zia-gold transition-colors">Fleet</a>
+            <a href="contact.html" class="text-zia-muted text-sm hover:text-zia-gold transition-colors">Contact</a>
+            <a href="schedule.html" class="text-zia-muted text-sm hover:text-zia-gold transition-colors">Schedule</a>
+          </div>
+        </div>
+
+        <!-- Column 3: Connect -->
+        <div>
+          <h4 class="font-heading text-white text-sm uppercase tracking-wider mb-6">Connect With Us</h4>
+          <div class="flex gap-3 mb-6">
+            <a href="#" aria-label="Instagram" class="w-10 h-10 rounded-full border border-zia-steel flex items-center justify-center text-zia-muted hover:text-zia-gold hover:border-zia-gold hover:glow-gold transition-all">
+              <i data-lucide="instagram" class="w-4 h-4"></i>
+            </a>
+            <a href="#" aria-label="Facebook" class="w-10 h-10 rounded-full border border-zia-steel flex items-center justify-center text-zia-muted hover:text-zia-gold hover:border-zia-gold transition-all">
+              <i data-lucide="facebook" class="w-4 h-4"></i>
+            </a>
+            <a href="#" aria-label="X (Twitter)" class="w-10 h-10 rounded-full border border-zia-steel flex items-center justify-center text-zia-muted hover:text-zia-gold hover:border-zia-gold transition-all">
+              <i data-lucide="twitter" class="w-4 h-4"></i>
+            </a>
+            <a href="#" aria-label="YouTube" class="w-10 h-10 rounded-full border border-zia-steel flex items-center justify-center text-zia-muted hover:text-zia-gold hover:border-zia-gold transition-all">
+              <i data-lucide="youtube" class="w-4 h-4"></i>
+            </a>
+          </div>
+          <a href="mailto:info@teamziajetracing.com" class="text-zia-muted text-sm hover:text-zia-gold transition-colors">info@teamziajetracing.com</a>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="border-t border-zia-steel mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-zia-muted text-xs">&copy; 2026 Team Zia Jet Racing. All Rights Reserved.</p>
+        <p class="text-zia-muted text-xs">Designed &amp; Developed by <a href="#" class="text-zia-gold hover:underline">Ultra Tech LLC</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== BACK TO TOP ========== -->
+  <button id="back-to-top" class="fixed bottom-6 right-6 z-40 w-12 h-12 rounded-full bg-zia-red text-white flex items-center justify-center opacity-0 pointer-events-none hover:bg-zia-gold hover:scale-110 transition-all" aria-label="Back to top">
+    <i data-lucide="chevron-up" class="w-5 h-5"></i>
+  </button>
+
+  <!-- ========== SCRIPTS ========== -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>lucide.createIcons();</script>
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/countdown.js"></script>
+  <script src="js/counter.js"></script>
+  <script src="js/cursor.js"></script>
+  <script src="js/contact-form.js"></script>
+
+  <!-- Accordion Toggle -->
+  <script>
+    document.querySelectorAll('.accordion-item').forEach(item => {
+      const btn = item.querySelector('button');
+      btn.addEventListener('click', () => {
+        const isActive = item.classList.contains('active');
+        document.querySelectorAll('.accordion-item').forEach(i => i.classList.remove('active'));
+        if (!isActive) item.classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>

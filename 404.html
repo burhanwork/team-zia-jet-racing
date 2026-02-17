@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 — Page Not Found | Team Zia Jet Racing</title>
+  <meta name="description" content="The page you're looking for has gone supersonic. Return to Team Zia Jet Racing homepage.">
+
+  <link rel="icon" href="images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            zia: {
+              red: '#CC0000',
+              'deep-red': '#8B0000',
+              gold: '#FFD700',
+              amber: '#FFA500',
+              black: '#0A0A0A',
+              dark: '#111111',
+              surface: '#1A1A1A',
+              steel: '#2A2A2A',
+              muted: '#888888',
+              light: '#E0E0E0',
+            }
+          },
+          fontFamily: {
+            display: ['Bebas Neue', 'sans-serif'],
+            heading: ['Oswald', 'sans-serif'],
+            body: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="bg-zia-black text-zia-light font-body antialiased overflow-x-hidden">
+
+  <main class="relative min-h-screen flex items-center justify-center overflow-hidden noise-overlay">
+    <!-- Background -->
+    <div class="absolute inset-0 bg-zia-black"></div>
+    <div class="absolute inset-0" style="background: radial-gradient(ellipse at center, rgba(204,0,0,0.1) 0%, transparent 70%);"></div>
+
+    <!-- Speed lines -->
+    <div class="speed-line absolute top-[20%] w-[40%]" style="--duration:3s;--delay:0s;"></div>
+    <div class="speed-line absolute top-[35%] w-[55%]" style="--duration:4s;--delay:1s;"></div>
+    <div class="speed-line absolute top-[50%] w-[30%]" style="--duration:2.5s;--delay:0.5s;"></div>
+    <div class="speed-line absolute top-[65%] w-[50%]" style="--duration:3.5s;--delay:2s;"></div>
+    <div class="speed-line absolute top-[80%] w-[45%]" style="--duration:3s;--delay:1.5s;"></div>
+
+    <!-- Content -->
+    <div class="relative z-10 text-center px-6">
+      <a href="index.html">
+        <img src="images/logo.png" alt="Team Zia Jet Racing" class="w-16 h-16 mx-auto mb-8 object-contain opacity-60 hover:opacity-100 transition-opacity">
+      </a>
+      <h1 class="font-display text-zia-red leading-none" style="font-size: clamp(5rem, 15vw, 12rem);">404</h1>
+      <p class="font-heading text-zia-gold text-xl lg:text-2xl tracking-wider mt-4">LOST IN THE CLOUDS</p>
+      <p class="text-zia-muted mt-4 max-w-md mx-auto">Looks like this page went supersonic and disappeared. Let's get you back on the ground.</p>
+      <a href="index.html" class="inline-block mt-8 btn-sweep btn-red-to-gold bg-zia-red text-white font-heading uppercase tracking-wider px-8 py-4 rounded-lg text-sm hover:text-zia-black transition-colors">
+        Return to Base
+      </a>
+    </div>
+  </main>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>lucide.createIcons();</script>
+</body>
+</html>
